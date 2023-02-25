@@ -30,19 +30,19 @@ let filters = {}
 function updateFilters() {
 
     // 4a. Save the element that was changed as a variable.
-    let change_element = d3.select(this)
+    let changeElement = d3.select(this)
     // 4b. Save the value that was changed as a variable.
-    let change_element_property = change_element.property("value")
+    let changeElementProperty = changeElement.property("value")
     // 4c. Save the id of the filter that was changed as a variable.
-    let change_element_id = change_element.attr("id")
+    let changeElementId = changeElement.attr("id")
   
     // 5. If a filter value was entered then add that filterId and value
     // to the filters list. Otherwise, clear that filter from the filters object.
-    if (change_element_property) {
-         filters[change_element_id] = change_element_property
+    if (changeElementProperty) {
+         filters[changeElementId] = changeElementProperty
     } 
     else {
-      delete filters[change_element_id]
+      delete filters[changeElementId]
     }
   
     // 6. Call function to apply all filters and rebuild the table
